@@ -1,0 +1,257 @@
+@font-face {
+  font-family: "Han";
+  src: url(./assets/fonts/HankenGrotesk-VariableFont_wght.ttf);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Han", sans-serif;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100vh;
+  overflow-x: hidden;
+  gap: 30px;
+  /* padding: 200px; */
+}
+
+
+.card-container {
+  background-color: #fff;
+  /* display: grid; */
+  /* grid-template-columns: repeat(2 , 1fr); */
+  display: flex;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  max-width: 700px; 
+  height: auto;
+  width: 100vw;
+}
+
+.result-section {
+  background: linear-gradient(#4936f2, #5f3ffc, #4233f0);
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 50px 30px;
+  border-radius: 20px;
+}
+.result-label {
+  font-size: 20px;
+  font-weight: bold;
+  color: #c4baff;
+}
+.score-circle {
+  background-color: #482cda;
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 20px 0;
+}
+.score {
+  font-size: 48px;
+  font-weight: bold;
+  color: #fffeff;
+}
+
+.out-of {
+  font-size: 16px;
+  color: #b7aec9;
+}
+
+.rating {
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: 10px;
+  color: #fbfdff;
+}
+.description {
+  font-size: 14px;
+  margin-top: 20px;
+  color: #bfbfff;
+}
+
+.summary-section {
+  flex: 1;
+  background-color: #fff;
+  box-shadow: 0 24px 48px rgba(0, 0, 0, 0.075);
+  padding: 50px;
+}
+
+.summary-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #41495f;
+}
+
+.summary-list {
+  list-style: none;
+  margin-bottom: 30px;
+}
+/* .summary-list li {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 0;
+  /* border-bottom: 1px solid #f0f0f0; */
+.summary-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+  border-radius: 10px; 
+  padding: 15px;
+  margin-bottom: 10px; /*  to Add spacing between items */
+}
+
+.summary-list li svg {
+  margin-right: 10px; /* to Add space between the icon and the text */
+}
+
+.summary-list li:nth-child(1) {
+  background-color: rgba(255, 85, 85, 0.1); 
+  color: #F55; 
+}
+
+.summary-list li:nth-child(2) {
+  background-color: rgba(255, 178, 30, 0.1); 
+  color: #FFB21E; 
+}
+
+
+
+.summary-list li:nth-child(3) {
+  background-color: rgba(0, 187, 143, 0.1); /* Light green background */
+  color: #00BB8F; /* Green text */
+}
+.summary-list li:nth-child(4) {
+  background-color: rgba(60, 10, 179, 0.1); 
+  color: #3540a5;
+}
+
+.summary-item  {
+  font-size: 16px;
+  color: #555;
+}
+
+.summary-item span {
+  color: #666;
+  font-weight: bold;
+}
+
+
+.btn {
+  display: inline-block;
+  width: 100%;
+  /* text-decoration: none; */
+  background-color: #41495f;
+  color: #fff;
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #303b59;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+/* Media Queries */
+@media (max-width: 900px) {
+  body{
+    justify-content: start;
+  }
+  .card-container {
+    width: 100%;
+    flex-direction: column;
+    border-radius: 0;
+  }
+  
+  .result-section {
+    background-color: #666;
+    padding: 30px 20px; 
+    border-radius: 040px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+  }
+
+  .score-circle {
+    width: 120px;
+    height: 120px;
+  }
+
+  .score {
+    font-size: 36px;
+  }
+}
+
+@media (max-width: 600px) {
+  .summary-title {
+    font-size: 18px;
+  }
+
+  .summary-list li {
+    padding: 10px;
+  }
+
+  .summary-item {
+    font-size: 14px;
+  }
+
+  .btn {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .result-section {
+    padding: 20px 10px;
+  }
+}
+
+@media (max-width: 400px) {
+  .score-circle {
+    width: 100px;
+    height: 100px;
+  }
+
+  .score {
+    font-size: 28px;
+  }
+
+  .result-label, .rating, .description {
+    font-size: 16px;
+  }
+
+  .btn {
+    font-size: 12px;
+    padding: 8px;
+  }
+}
